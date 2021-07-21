@@ -1,0 +1,8 @@
+.dockerignore
+Dockerfile
+build
+.cargo
+docker
+ci
+.gitignore
+*.sh
