@@ -81,7 +81,7 @@ impl ReplicaService {
                     key_file:    None,
                 })
                 .context("error creating intel attestation tls client proxy")?;
-            Some(new_ias_client(&config.attestation.host, &config.attestation.api_key, intel_client_proxy).context("error creating intel attestation client")?)
+            Some(new_ias_client(&config.attestation.host, &config.attestation.apiKey, intel_client_proxy).context("error creating intel attestation client")?)
         } else {
             None
         };

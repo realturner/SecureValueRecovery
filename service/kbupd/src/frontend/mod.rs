@@ -89,7 +89,7 @@ impl FrontendService {
                 })
                 .context("error creating intel attestation tls proxy client")?;
             let new_intel_client =
-                new_ias_client(&config.attestation.host, &config.attestation.api_key, intel_client_proxy).context("error creating intel attestation client")?;
+                new_ias_client(&config.attestation.host, &config.attestation.apiKey, intel_client_proxy).context("error creating intel attestation client")?;
             handshake_manager = Some(HandshakeManager::new(
                 enclave_manager_tx.clone(),
                 new_intel_client.clone(),
